@@ -1,0 +1,6 @@
+flask
+flask-cors
+whisper
+huggingface_hub
+torch
+soundfile
