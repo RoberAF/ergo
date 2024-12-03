@@ -1,36 +1,71 @@
+<!-- src/components/Navbar.vue -->
+
 <template>
-    <div class="w-full max-w-md mx-auto">
-        <nav class="flex justify-around bg-gray-800 text-white py-2 rounded-t-lg">
-            <!-- Item de Navegación -->
-            <div class="flex flex-col items-center cursor-pointer">
-                <span class="text-sm">Chat</span>
-            </div>
-            <!-- Otros Items -->
-            <div class="flex flex-col items-center cursor-pointer">
-                <span class="text-sm">Actividades</span>
-            </div>
-            <div class="flex flex-col items-center cursor-pointer">
-                <span class="text-sm">Memoria</span>
-            </div>
-            <div class="flex flex-col items-center cursor-pointer">
-                <span class="text-sm">Diario</span>
-            </div>
-            <div class="flex flex-col items-center cursor-pointer">
-                <span class="text-sm">Perfil</span>
-            </div>
-            <div class="flex flex-col items-center cursor-pointer">
-                <span class="text-sm">Habitación</span>
-            </div>
-        </nav>
-    </div>
+  <div class="w-full max-w-fit-content mx-auto p-2 rounded-xl bg-white bg-opacity-0 backdrop-blur-lg shadow-md ">
+    <nav class="flex justify-around   text-white py-2">
+      <!-- Item de Navegación: Chat -->
+      <router-link
+        to="/"
+        class="flex flex-col items-center cursor-pointer px-4 py-2 bg-opacity-0 backdrop-blur-lg rounded-xl hover:bg-white/30"
+        :class="{ 'bg-slate-500': isActive('/') }"
+      >
+        <span class="text-sm font-bold	">Chat</span>
+      </router-link>
+      
+      <!-- Item de Navegación: Actividades -->
+      <router-link
+        to="/actividades"
+        class="flex flex-col items-center cursor-pointer px-4 py-2 bg-opacity-0 backdrop-blur-lg rounded-xl hover:bg-white/30"
+        :class="{ 'bg-slate-500': isActive('/actividades') }"
+      >
+        <span class="text-sm font-bold">Actividades</span>
+      </router-link>
+      
+      <!-- Item de Navegación: Memoria -->
+      <router-link
+        to="/memoria"
+        class="flex flex-col items-center cursor-pointer px-4 py-2 bg-opacity-0 backdrop-blur-lg rounded-xl hover:bg-white/30"
+        :class="{ 'bg-slate-500': isActive('/memoria') }"
+      >
+        <span class="text-sm font-bold">Memoria</span>
+      </router-link>
+      
+      <!-- Item de Navegación: Diario -->
+      <router-link
+        to="/diario"
+        class="flex flex-col items-center cursor-pointer px-4 py-2 bg-opacity-0 backdrop-blur-lg rounded-xl hover:bg-white/30"
+        :class="{ 'bg-slate-500': isActive('/diario') }"
+      >
+        <span class="text-sm font-bold">Diario</span>
+      </router-link>
+      
+      <!-- Item de Navegación: Perfil -->
+      <router-link
+        to="/perfil"
+        class="flex flex-col items-center cursor-pointer px-4 py-2 bg-opacity-0 backdrop-blur-lg rounded-xl hover:bg-white/30"
+        :class="{ 'bg-slate-500': isActive('/perfil') }"
+      >
+        <span class="text-sm font-bold">Perfil</span>
+      </router-link>
+      
+    </nav>
+  </div>
 </template>
 
 <script>
+import { useRoute } from 'vue-router';
+
 export default {
-    name: 'Navbar',
-    methods: {
-        // Puedes agregar métodos para manejar la navegación aquí
-    },
+  name: 'Navbar',
+  setup() {
+    const route = useRoute();
+
+    const isActive = (path) => route.path === path;
+
+    return {
+      isActive,
+    };
+  },
 };
 </script>
 

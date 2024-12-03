@@ -1,34 +1,35 @@
+<!-- src/components/Chat.vue -->
 <template>
-  <div class=" w-1/3 fixed top-0">
-    <Navbar />
+  <div>
+    <Navbar/>
   </div>
-  <div class="flex flex-col w-1/3 z-10 mb-4">
-    
+  <div class="flex flex-col flex-1">
     <!-- Área de mensajes -->
-    <div class="flex-1 overflow-y-auto p-4 custom-scrollbar" :style="{ maxHeight: maxMessagesHeight }">
+    <div class="flex-1 overflow-y-auto p-4 custom-scrollbar">
       <div v-for="(message, index) in messages" :key="index" :class="[
         'flex mb-2',
-        message.sender === 'user' ? 'justify-end' : 'justify-start',
+        message.role === 'user' ? 'justify-end' : 'justify-start',
       ]">
         <p class="break-words w-auto max-w-xs p-3 rounded-3xl" :class="[
-          message.sender === 'user'
+          message.role === 'user'
             ? 'bg-blue-500 text-white rounded-br-md'
             : 'bg-gray-600 text-gray-100 rounded-bl-md',
         ]">
-          {{ message.text }}
+          {{ message.content }}
         </p>
       </div>
     </div>
+
     <!-- Área de entrada -->
     <div class="flex-none p-4 w-full">
-      <div class="flex w-full">
+      <div class="flex w-full rounded-xl">
         <!-- Campo de entrada -->
         <input v-model="userInput" @keyup.enter="sendMessage" type="text"
-          class="flex-1 p-2 bg-gray-800 text-white border border-gray-600 rounded-l focus:outline-none"
+          class="flex-1 p-2 rounded-xl  bg-white bg-opacity-10 backdrop-blur-xl	 shadow-xl focus:outline-none"
           placeholder="Escribe tu mensaje..." />
         <!-- Botón Enviar -->
         <button @click="sendMessage"
-          class="-ml-px px-4 bg-blue-500 text-white border border-gray-600 rounded-r focus:outline-none">
+          class="-ml-px px-4 bg-blue-500 text-white border border-gray-600 rounded-xl focus:outline-none">
           Enviar
         </button>
       </div>
@@ -39,42 +40,78 @@
 <script>
 import Navbar from './Navbar.vue';
 import axios from 'axios';
+import { ref } from 'vue';
 
 export default {
   components: {
-    Navbar,
+    Navbar
   },
-  data() {
-    return {
-      messages: [],
-      userInput: '',
-    };
-  },
-  methods: {
-    async sendMessage() {
-      if (this.userInput.trim() === '') return;
+  name: 'Chat',
+  setup() {
+    // Inicializar el historial de mensajes sin el mensaje de sistema
+    const messages = ref([]);
+    const userInput = ref('');
+    const isLoading = ref(false);
 
-      // Agregar el mensaje del usuario al array de mensajes
-      this.messages.push({ sender: 'user', text: this.userInput });
-      const message = this.userInput;
-      this.userInput = '';
+    const sendMessage = async () => {
+      if (userInput.value.trim() === '') return;
+
+      // Agregar el mensaje del usuario al historial
+      messages.value.push({
+        role: 'user',
+        content: userInput.value,
+      });
+
+      const currentMessage = userInput.value;
+      userInput.value = '';
+      isLoading.value = true;
 
       try {
-        // Enviar el mensaje al backend
         const response = await axios.post('http://localhost:5000/message', {
-          message,
+          messages: messages.value,
         });
 
-        // Agregar la respuesta del bot al array de mensajes
-        this.messages.push({ sender: 'bot', text: response.data.reply });
+        // Agregar la respuesta del bot al historial
+        messages.value.push({
+          role: 'bot',
+          content: response.data.reply,
+        });
       } catch (error) {
         console.error('Error al enviar el mensaje:', error);
-        this.messages.push({
-          sender: 'bot',
-          text: 'Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.',
-        });
+        if (error.response) {
+          // El servidor respondió con un código de estado fuera del rango 2xx
+          messages.value.push({
+            role: 'bot',
+            content:
+              error.response.data.reply ||
+              'Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.',
+          });
+        } else if (error.request) {
+          // La solicitud fue hecha pero no se recibió respuesta
+          messages.value.push({
+            role: 'bot',
+            content:
+              'No se recibió respuesta del servidor. Por favor, intenta de nuevo.',
+          });
+        } else {
+          // Algo sucedió al configurar la solicitud que desencadenó un Error
+          messages.value.push({
+            role: 'bot',
+            content:
+              'Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.',
+          });
+        }
+      } finally {
+        isLoading.value = false;
       }
-    },
+    };
+
+    return {
+      messages,
+      userInput,
+      sendMessage,
+      isLoading,
+    };
   },
 };
 </script>
