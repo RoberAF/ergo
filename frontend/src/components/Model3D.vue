@@ -1,10 +1,11 @@
+<!-- src/components/Model3D.vue -->
 <template>
   <div ref="canvasContainer" class="w-full h-full z-0"></div>
 </template>
 
 <script>
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 export default {
@@ -17,16 +18,15 @@ export default {
       const scene = new THREE.Scene();
 
       // Configuración de la cámara
-      const fov = 60; // Campo de visión (puedes ajustarlo para cambiar la perspectiva)
-      const aspect = this.$el.clientWidth / this.$el.clientHeight; // Proporción de aspecto
-      const near = 0.1; // Plano cercano
-      const far = 1000; // Plano lejano
+      const fov = 60;
+      const aspect = this.$el.clientWidth / this.$el.clientHeight;
+      const near = 0.1;
+      const far = 1000;
       const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
       // Posición inicial de la cámara
-      // Ajusta estos valores para mover la cámara más cerca/lejos o en diferentes direcciones
-      camera.position.set(0, 1., 5); // (x, y, z)
-      camera.lookAt(0, 0, 0); // La cámara mira al origen de la escena
+      camera.position.set(0, 1.0, 5);
+      camera.lookAt(0, 0, 0);
 
       // Crear el renderizador
       const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -35,43 +35,50 @@ export default {
       renderer.setClearColor(0x000000, 0);
       this.$refs.canvasContainer.appendChild(renderer.domElement);
 
-      // Configurar controles de órbita (opcional)
+      // Configurar controles de órbita
       const controls = new OrbitControls(camera, renderer.domElement);
-      controls.enableDamping = true; // Habilitar amortiguación para una mejor experiencia
+      controls.enableDamping = true;
       controls.dampingFactor = 0.05;
-      controls.target.set(0, 0, 0); // Punto al que la cámara está mirando
+      controls.target.set(0, 0, 0);
       controls.update();
 
       // Añadir luz ambiental
-      const ambientLight = new THREE.AmbientLight(0xffffff, 1); // Luz blanca suave
+      const ambientLight = new THREE.AmbientLight(0xffffff, 1);
       scene.add(ambientLight);
 
-      // Opcional: Añadir luz direccional para resaltar el modelo
+      // Añadir luz direccional (opcional)
       const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
       directionalLight.position.set(5, 10, 7.5);
       scene.add(directionalLight);
 
+      // Variables para animación
+      let mixer = null;
+      const clock = new THREE.Clock();
+
       // Cargar el modelo 3D
-      const loader = new GLTFLoader();
+      const loader = new FBXLoader();
       loader.load(
-        '/src/assets/models/674aeeae8dc7c6e19d387ee0.glb',
-        (gltf) => {
-          const model = gltf.scene;
+        '/src/assets/models/Idle.fbx', // Ruta correcta desde la carpeta public
+        (fbx) => {
+          const model = fbx;
 
           // Posición del modelo
-          // Ajusta estos valores para mover el modelo en el espacio (izquierda/derecha, arriba/abajo, adelante/atrás)
-          model.position.set(0, -5.5, 1); // Centrar el modelo en la escena
+          model.position.set(0, -5.5, 1);
 
           // Escala del modelo
-          // Ajusta estos valores para aumentar o reducir el tamaño del modelo
-          model.scale.set(4, 4, 4); // Duplicar el tamaño del modelo
-
-          // Rotación del modelo
-          // Descomenta y ajusta si necesitas rotar el modelo
-          // model.rotation.y = THREE.MathUtils.degToRad(45); // Rotar 45 grados en el eje Y
+          model.scale.set(4, 4, 4);
 
           // Añadir el modelo a la escena
           scene.add(model);
+
+          // Configurar el AnimationMixer
+          mixer = new THREE.AnimationMixer(model);
+          if (fbx.animations && fbx.animations.length) {
+            fbx.animations.forEach((clip) => {
+              const action = mixer.clipAction(clip);
+              action.play();
+            });
+          }
 
           // Iniciar la animación después de cargar el modelo
           animate();
@@ -85,7 +92,9 @@ export default {
       // Función de animación
       const animate = () => {
         requestAnimationFrame(animate);
-        controls.update(); // Actualizar los controles de órbita
+        const delta = clock.getDelta();
+        if (mixer) mixer.update(delta);
+        controls.update();
         renderer.render(scene, camera);
       };
 

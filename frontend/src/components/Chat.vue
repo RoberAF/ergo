@@ -1,21 +1,32 @@
 <!-- src/components/Chat.vue -->
 <template>
-  <div>
-    <Navbar/>
-  </div>
   <div class="flex flex-col flex-1">
+    <Navbar />
     <!-- Área de mensajes -->
     <div class="flex-1 overflow-y-auto p-4 custom-scrollbar">
-      <div v-for="(message, index) in messages" :key="index" :class="[
-        'flex mb-2',
-        message.role === 'user' ? 'justify-end' : 'justify-start',
-      ]">
-        <p class="break-words w-auto max-w-xs p-3 rounded-3xl" :class="[
-          message.role === 'user'
-            ? 'bg-blue-500 text-white rounded-br-md'
-            : 'bg-gray-600 text-gray-100 rounded-bl-md',
-        ]">
+      <div
+        v-for="(message, index) in messages"
+        :key="index"
+        :class="[
+          'flex mb-2',
+          message.role === 'user' ? 'justify-end' : 'justify-start',
+        ]"
+      >
+        <p
+          class="break-words w-auto max-w-xs p-3 rounded-3xl"
+          :class="[
+            message.role === 'user'
+              ? 'bg-blue-500 text-white rounded-br-md'
+              : 'bg-gray-600 text-gray-100 rounded-bl-md',
+          ]"
+        >
           {{ message.content }}
+        </p>
+      </div>
+      <!-- Indicador de Carga -->
+      <div v-if="isLoading" class="flex justify-start mb-2">
+        <p class="bg-gray-600 text-gray-100 p-3 rounded-bl-md rounded-tl-md">
+          ...
         </p>
       </div>
     </div>
@@ -24,12 +35,18 @@
     <div class="flex-none p-4 w-full">
       <div class="flex w-full rounded-xl">
         <!-- Campo de entrada -->
-        <input v-model="userInput" @keyup.enter="sendMessage" type="text"
-          class="flex-1 p-2 rounded-xl  bg-white bg-opacity-10 backdrop-blur-xl	 shadow-xl focus:outline-none"
-          placeholder="Escribe tu mensaje..." />
+        <input
+          v-model="userInput"
+          @keyup.enter="sendMessage"
+          type="text"
+          class="flex-1 p-2 bg-gray-800 text-white border border-gray-600 rounded-xl focus:outline-none"
+          placeholder="Escribe tu mensaje..."
+        />
         <!-- Botón Enviar -->
-        <button @click="sendMessage"
-          class="-ml-px px-4 bg-blue-500 text-white border border-gray-600 rounded-xl focus:outline-none">
+        <button
+          @click="sendMessage"
+          class="-ml-px px-4 bg-blue-500 text-white border border-gray-600 rounded-xl focus:outline-none"
+        >
           Enviar
         </button>
       </div>
@@ -38,9 +55,9 @@
 </template>
 
 <script>
-import Navbar from './Navbar.vue';
 import axios from 'axios';
 import { ref } from 'vue';
+import Navbar from './Navbar.vue';
 
 export default {
   components: {
@@ -72,10 +89,25 @@ export default {
         });
 
         // Agregar la respuesta del bot al historial
-        messages.value.push({
+        const botMessage = {
           role: 'bot',
           content: response.data.reply,
-        });
+        };
+
+        // Verificar si se recibió audio
+        if (response.data.audio) {
+          botMessage.audio = response.data.audio;
+        }
+
+        messages.value.push(botMessage);
+
+        // Reproducir el audio si está disponible
+        if (response.data.audio) {
+          const audio = new Audio(`data:audio/mpeg;base64,${response.data.audio}`);
+          audio.play().catch((error) => {
+            console.error('Error al reproducir el audio:', error);
+          });
+        }
       } catch (error) {
         console.error('Error al enviar el mensaje:', error);
         if (error.response) {
