@@ -1,110 +1,64 @@
 <template>
-    <div class="w-full h-full p-4">
-      <!-- Tarjeta Grande -->
-      <div class="bg-white rounded-lg shadow-lg p-4">
-        <h2 class="text-xl font-semibold mb-4">Actividades</h2>
-        <!-- Contenedor de Tarjetas Pequeñas -->
-        <div class="grid grid-cols-1 gap-4">
-          <!-- Tarjeta Pequeña: Películas -->
-          <div
-            class="flex items-center bg-blue-100 rounded-lg p-4 cursor-pointer hover:bg-blue-200"
-          >
-            <!-- Ícono -->
-            <div class="text-blue-500 mr-4">
-              <!-- Puedes reemplazar esto con un ícono SVG -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.868v4.264a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-            <!-- Texto -->
-            <div>
-              <h3 class="text-lg font-semibold">Películas</h3>
-              <p class="text-sm text-gray-600">Obtén recomendaciones para ti</p>
-            </div>
+  <div class="relative bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg flex flex-col w-full max-w-4xl mx-auto h-full overflow-hidden">
+    
+    <!-- Fondo translúcido -->
+    <div class="absolute inset-0 bg-black opacity-20 rounded-lg"></div>
+    
+    <!-- Contenedor Scrollable -->
+    <div class="flex-1 overflow-y-auto p-4 scrollbar-thin scrollbar-thumb-slate-900/20 scrollbar-track-transparent relative z-10">
+      
+      <!-- Grid de 2 Columnas para Tarjetas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Tarjeta Principal: Selfie -->
+        <div
+          @click="navigateTo('Selfie')"
+          class="relative flex items-center bg-slate-800 bg-opacity-25 backdrop-filter backdrop-blur-lg rounded-lg shadow-md p-6 cursor-pointer hover:bg-slate-700 transition-colors duration-300"
+        >
+          <div>
+            <h3 class="text-lg font-semibold text-gray-200">Selfie</h3>
+            <p class="text-sm text-gray-300 mt-2">Obtén un selfie de tu Ergo en el estilo que quieras!</p>
           </div>
-          <!-- Tarjeta Pequeña: Música -->
-          <div
-            class="flex items-center bg-green-100 rounded-lg p-4 cursor-pointer hover:bg-green-200"
-          >
-            <div class="text-green-500 mr-4">
-              <!-- Ícono de música -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 19V6l12-2v13"
-                />
-                <circle cx="6" cy="18" r="3" />
-                <circle cx="18" cy="16" r="3" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold">Música</h3>
-              <p class="text-sm text-gray-600">Explora nueva música</p>
-            </div>
+          <!-- Imagen a la derecha -->
+          <img
+            src="https://1464501529.rsc.cdn77.org/assistant/Replika_selfies_recommended.png"
+            alt="Selfie"
+            class="w-16 h-16 object-contain ml-4"
+          />
+        </div>
+
+        <!-- Tarjeta Principal: Imágenes IA -->
+        <div
+          @click="navigateTo('ImagenesIA')"
+          class="relative flex items-center bg-slate-800 bg-opacity-25 backdrop-filter backdrop-blur-lg rounded-lg shadow-md p-6 cursor-pointer hover:bg-slate-700 transition-colors duration-300"
+        >
+          <div>
+            <h3 class="text-lg font-semibold text-gray-200">Imágenes IA</h3>
+            <p class="text-sm text-gray-300 mt-2">Genera imágenes usando IA</p>
           </div>
-          <!-- Tarjeta Pequeña: Cocina -->
-          <div
-            class="flex items-center bg-yellow-100 rounded-lg p-4 cursor-pointer hover:bg-yellow-200"
-          >
-            <div class="text-yellow-500 mr-4">
-              <!-- Ícono de cocina -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 8c-1.657 0-3 1.343-3 3 0 1.2.637 2.25 1.597 2.813L12 20l1.403-6.187A2.997 2.997 0 0015 11c0-1.657-1.343-3-3-3z"
-                />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold">Cocina</h3>
-              <p class="text-sm text-gray-600">Recetas inspiradoras</p>
-            </div>
-          </div>
+          <!-- Imagen a la derecha -->
+          <img
+            src="https://1464501529.rsc.cdn77.org/assistant/AI_images.png"
+            alt="Imágenes IA"
+            class="w-16 h-16 object-contain ml-4"
+          />
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'Actividades',
-  };
-  </script>
-  
-  <style scoped>
-  /* Estilos adicionales si es necesario */
-  </style>
-  
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Actividades',
+  methods: {
+    navigateTo(componentName) {
+      this.$router.push({ name: componentName });
+    },
+  },
+};
+</script>
+
+<style scoped>
+/* Añade estilos específicos para Actividades aquí si es necesario */
+</style>

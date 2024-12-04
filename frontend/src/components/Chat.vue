@@ -1,25 +1,16 @@
-<!-- src/components/Chat.vue -->
 <template>
   <div class="flex flex-col flex-1">
-    <Navbar />
     <!-- Área de mensajes -->
-    <div class="flex-1 overflow-y-auto p-4 custom-scrollbar">
-      <div
-        v-for="(message, index) in messages"
-        :key="index"
-        :class="[
-          'flex mb-2',
-          message.role === 'user' ? 'justify-end' : 'justify-start',
-        ]"
-      >
-        <p
-          class="break-words w-auto max-w-xs p-3 rounded-3xl"
-          :class="[
-            message.role === 'user'
-              ? 'bg-blue-500 text-white rounded-br-md'
-              : 'bg-gray-600 text-gray-100 rounded-bl-md',
-          ]"
-        >
+    <div class="flex-1 overflow-y-auto p-4 scrollbar-thin scrollbar-thumb-slate-900/20 scrollbar-track-transparent">
+      <div v-for="(message, index) in messages" :key="index" :class="[
+        'flex mb-2',
+        message.role === 'user' ? 'justify-end' : 'justify-start',
+      ]">
+        <p class="break-words w-auto max-w-xs p-3 rounded-3xl" :class="[
+          message.role === 'user'
+            ? 'bg-slate-600 text-white rounded-br-md'
+            : 'bg-slate-600 text-gray-100 rounded-bl-md',
+        ]">
           {{ message.content }}
         </p>
       </div>
@@ -33,20 +24,15 @@
 
     <!-- Área de entrada -->
     <div class="flex-none p-4 w-full">
-      <div class="flex w-full rounded-xl">
+      <div class="flex w-full rounded-xl bg-slate-900 bg-opacity-30 backdrop-blur-lg shadow-md ">
         <!-- Campo de entrada -->
-        <input
-          v-model="userInput"
-          @keyup.enter="sendMessage"
-          type="text"
-          class="flex-1 p-2 bg-gray-800 text-white border border-gray-600 rounded-xl focus:outline-none"
-          placeholder="Escribe tu mensaje..."
-        />
+        <input v-model="userInput" @keyup.enter="sendMessage" type="text"
+          class="flex-1 p-2 bg-transparent text-white placeholder-slate-200 focus:outline-none"
+          placeholder="Escribe algo..." />
         <!-- Botón Enviar -->
-        <button
-          @click="sendMessage"
-          class="-ml-px px-4 bg-blue-500 text-white border border-gray-600 rounded-xl focus:outline-none"
-        >
+        <button @click="sendMessage"
+          class="flex items-center justify-center px-4 bg-transparent text-white hover:bg-slate-700 hover:bg-opacity-30 transition-colors rounded-r-xl"
+          aria-label="Enviar mensaje">
           Enviar
         </button>
       </div>
@@ -54,15 +40,12 @@
   </div>
 </template>
 
+
 <script>
 import axios from 'axios';
 import { ref } from 'vue';
-import Navbar from './Navbar.vue';
 
 export default {
-  components: {
-    Navbar
-  },
   name: 'Chat',
   setup() {
     // Inicializar el historial de mensajes sin el mensaje de sistema
@@ -147,24 +130,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #4a5568 #2d3748;
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #2d3748;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #4a5568;
-  border-radius: 4px;
-  border: 2px solid #2d3748;
-}
-</style>
