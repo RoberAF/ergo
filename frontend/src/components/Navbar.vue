@@ -1,7 +1,7 @@
 <!-- src/components/Navbar.vue -->
 
 <template>
-  <div class="w-full max-w-fit-content mx-auto rounded-xl bg-slate-900 bg-opacity-30  shadow-md ">
+  <div class="w-full max-w-fit-content mx-auto rounded-xl bg-slate-900 bg-opacity-40  shadow-md ">
     <nav class="flex justify-around   text-white py-2">
       <!-- Item de Navegación: Chat -->
       <router-link

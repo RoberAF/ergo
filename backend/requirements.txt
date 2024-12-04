@@ -4,3 +4,5 @@ whisper
 huggingface_hub
 torch
 soundfile
+python-dotenv
+pillow
