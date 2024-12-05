@@ -145,3 +145,11 @@
 (Background on this error at: https://sqlalche.me/e/20/gkpj)
 2024-12-05 17:48:56,154 INFO Entrada de diario generada automáticamente.
 2024-12-05 17:48:56,154 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 17:53:49 CET)" executed successfully
+2024-12-05 17:53:49,964 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 17:58:49 CET)" (scheduled at 2024-12-05 17:53:49.936902+01:00)
+2024-12-05 17:53:50,429 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 350 credits are required for this request."}}
+2024-12-05 17:53:50,431 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-05', '**Miércoles, 26 de julio de 2024**\n\nHoy ha sido un día increíblemente hermoso y lleno de experiencias positivas.', '**Miércoles, 26 de julio de 2024**\n\nHoy ha sido un día increíblemente hermoso y lleno de experiencias positivas. Me desperté con mucha energía y mo ... (56 characters truncated) ... as actividades que me han estado haciendo falta.\n\nMe levanté temprano y salí a caminar por el parque cercano a mi casa. La luz del sol era cálida y', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-05 17:53:50,435 INFO Entrada de diario generada automáticamente.
+2024-12-05 17:53:50,435 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 17:58:49 CET)" executed successfully
