@@ -15,11 +15,7 @@
         <!-- Tarjeta Principal: Selfie -->
         <div
           @click="navigateTo('Selfie')"
-<<<<<<< HEAD
           class="relative flex items-center bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-lg shadow-md p-6 cursor-pointer hover:bg-white/30 transition-colors duration-300"
-=======
-          class="relative flex items-center bg-slate-900 bg-opacity-40 backdrop-filter backdrop-blur-lg rounded-xl shadow-md p-6 cursor-pointer  hover:bg-white/30 transition-colors duration-300"
->>>>>>> 7be4c91b9b3d3f48567b5509b3b1e4f99fee2d22
         >
           <div>
             <h3 class="text-lg font-semibold text-gray-200">Selfie</h3>
