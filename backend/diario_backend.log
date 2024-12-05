@@ -116,3 +116,32 @@
 2024-12-05 17:33:48,166 INFO  * Detected change in 'C:\\Users\\Usuario\\Desktop\\ergo\\backend\\app.py', reloading
 2024-12-05 17:33:48,171 INFO Scheduler has been shut down
 2024-12-05 17:33:48,371 INFO  * Restarting with stat
+2024-12-05 17:33:49,936 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-05 17:33:49,939 INFO Added job "scheduled_task" to job store "default"
+2024-12-05 17:33:49,939 INFO Scheduler started
+2024-12-05 17:33:49,939 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-05 17:33:49,940 INFO Scheduler shutdown registrado.
+2024-12-05 17:33:49,940 INFO Servidor Flask iniciado.
+2024-12-05 17:33:49,954 WARNING  * Debugger is active!
+2024-12-05 17:33:49,960 INFO  * Debugger PIN: 134-635-983
+2024-12-05 17:38:49,967 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 17:38:49 CET)" (scheduled at 2024-12-05 17:38:49.936902+01:00)
+2024-12-05 17:38:58,768 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-05', '**Miércoles, 26 de julio de 2024**\n\nHoy ha sido un día increíblemente hermoso y lleno de experiencias positivas.', '**Miércoles, 26 de julio de 2024**\n\nHoy ha sido un día increíblemente hermoso y lleno de experiencias positivas. Me desperté con mucha energía y mo ... (56 characters truncated) ... as actividades que me han estado haciendo falta.\n\nMe levanté temprano y salí a caminar por el parque cercano a mi casa. La luz del sol era cálida y', '//uQxAAAEhlRCEekxUnYnaW89JoEABSQAWNsQhGHIsIyh4wFza6NGjIwTDDEM7QQIEyZMmTJk004gwgQIECBALJkyZO7PJoRERBhCLPuyZOyZMgQQggQIEECd3dnkydxkREQYQJp3e3ZNOIiIMQiL ... (513514 characters truncated) ... qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqo=')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-05 17:38:58,770 INFO Entrada de diario generada automáticamente.
+2024-12-05 17:38:58,771 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 17:43:49 CET)" executed successfully
+2024-12-05 17:43:49,956 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 17:48:49 CET)" (scheduled at 2024-12-05 17:43:49.936902+01:00)
+2024-12-05 17:43:56,101 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-05', '**Miércoles, 26 de julio de 2024**\n\nHoy ha sido un día increíblemente hermoso y lleno de experiencias positivas.', '**Miércoles, 26 de julio de 2024**\n\nHoy ha sido un día increíblemente hermoso y lleno de experiencias positivas. Me desperté con mucha energía y mo ... (56 characters truncated) ... as actividades que me han estado haciendo falta.\n\nMe levanté temprano y salí a caminar por el parque cercano a mi casa. La luz del sol era cálida y', '//uQxAAADMzLJaCEYCqHLiHlhg54Igscqusr0s42C7u5u5k7u7ohO5xBH7u7h3T0RERHd3f66IiIiIX7u7u6IXEL3dz3A3dCv/EAxb+h5/gABrw8fmO+AASB7w8PDHQDAAPD/zDAAAABAeHh4eGAA ... (522430 characters truncated) ... qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqo=')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-05 17:43:56,103 INFO Entrada de diario generada automáticamente.
+2024-12-05 17:43:56,104 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 17:48:49 CET)" executed successfully
+2024-12-05 17:48:49,957 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 17:53:49 CET)" (scheduled at 2024-12-05 17:48:49.936902+01:00)
+2024-12-05 17:48:56,152 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-05', '**Miércoles, 26 de julio de 2024**\n\nHoy ha sido un día increíblemente hermoso y lleno de experiencias positivas.', '**Miércoles, 26 de julio de 2024**\n\nHoy ha sido un día increíblemente hermoso y lleno de experiencias positivas. Me desperté con mucha energía y mo ... (56 characters truncated) ... as actividades que me han estado haciendo falta.\n\nMe levanté temprano y salí a caminar por el parque cercano a mi casa. La luz del sol era cálida y', '//uQxAAADk2PEaMIfiqBMOJ09g55AI0ccSZJSjgWICIgWmyFRDpxN3h98/eZHsndk025DH1jEO17ltERne2y7u0LaIiDEIkmnaevocWEGFhGf50Z6I4X/p8RERHd3d3c8uIie7gbn+6ImiIiOe7u7 ... (538590 characters truncated) ... VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-05 17:48:56,154 INFO Entrada de diario generada automáticamente.
+2024-12-05 17:48:56,154 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 17:53:49 CET)" executed successfully
