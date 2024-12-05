@@ -27,7 +27,7 @@
       <div class="flex w-full rounded-xl bg-slate-900 bg-opacity-30 backdrop-blur-lg shadow-md ">
         <!-- Campo de entrada -->
         <input v-model="userInput" @keyup.enter="sendMessage" type="text"
-          class="flex-1 p-2 bg-transparent text-white placeholder-slate-200 focus:outline-none"
+          class="h-14 flex-1 p-2 bg-transparent text-white placeholder-slate-200 focus:outline-none"
           placeholder="Escribe algo..." />
         <!-- Botón Enviar -->
         <button @click="sendMessage"

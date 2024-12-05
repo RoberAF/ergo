@@ -42,7 +42,7 @@
                     <div class="flex items-center justify-between mt-2">
                         <span class="text-xs text-gray-400">{{ promptText.length }}/500</span>
                         <button @click="suggestPrompt" :disabled="isSuggestDisabled"
-                            class="flex items-center px-2 py-0.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-slate-700 transition disabled:opacity-50">
+                            class="flex items-center px-2 py-0.5 bg-white bg-opacity-20 text-white rounded-xl hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-slate-700 transition disabled:opacity-50">
                             <!-- Icono SVG de sugerir -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-0.5" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
@@ -84,7 +84,7 @@
                         <!-- Botón Retrato -->
                         <button @click="selectAspectRatio('portrait')" :class="[
                             'flex items-center justify-center px-2 py-1 rounded-xl focus:outline-none transition text-xs',
-                            aspectRatio === 'portrait' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            aspectRatio === 'portrait' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <!-- Icono SVG de retrato -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-0.5" fill="none"
@@ -100,7 +100,7 @@
                         <!-- Botón Cuadrado -->
                         <button @click="selectAspectRatio('square')" :class="[
                             'flex items-center justify-center px-2 py-1 rounded-xl focus:outline-none transition text-xs',
-                            aspectRatio === 'square' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            aspectRatio === 'square' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <!-- Icono SVG de cuadrado -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-0.5" fill="none"
@@ -116,7 +116,7 @@
                         <!-- Botón Paisaje -->
                         <button @click="selectAspectRatio('landscape')" :class="[
                             'flex items-center justify-center px-2 py-1 rounded-xl focus:outline-none transition text-xs',
-                            aspectRatio === 'landscape' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            aspectRatio === 'landscape' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <!-- Icono SVG de paisaje -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-0.5" fill="none"
@@ -138,7 +138,7 @@
                         <!-- Botón Estilo: No style -->
                         <button @click="selectStyle('No style')" :class="[
                             'flex flex-col items-center p-1 rounded-xl focus:outline-none transition text-xs',
-                            selectedStyle === 'No style' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            selectedStyle === 'No style' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <img src="https://1464501529.rsc.cdn77.org/ai_image_gen_styles/No%20style@3x.webp"
                                 alt="No style" class="w-10 h-10 mb-0.5 object-contain">
@@ -148,7 +148,7 @@
                         <!-- Botón Estilo: Dreamscape -->
                         <button @click="selectStyle('Dreamscape')" :class="[
                             'flex flex-col items-center p-1 rounded-xl focus:outline-none transition text-xs',
-                            selectedStyle === 'Dreamscape' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            selectedStyle === 'Dreamscape' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <img src="https://1464501529.rsc.cdn77.org/ai_image_gen_styles/Dreamscape@2x.webp"
                                 alt="Dreamscape" class="w-10 h-10 mb-0.5 object-contain">
@@ -158,7 +158,7 @@
                         <!-- Botón Estilo: Anime -->
                         <button @click="selectStyle('Anime')" :class="[
                             'flex flex-col items-center p-1 rounded-xl focus:outline-none transition text-xs',
-                            selectedStyle === 'Anime' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            selectedStyle === 'Anime' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <img src="https://1464501529.rsc.cdn77.org/ai_image_gen_styles/Anime@2x.webp" alt="Anime"
                                 class="w-10 h-10 mb-0.5 object-contain">
@@ -168,7 +168,7 @@
                         <!-- Botón Estilo: Gothic -->
                         <button @click="selectStyle('Gothic')" :class="[
                             'flex flex-col items-center p-1 rounded-xl focus:outline-none transition text-xs',
-                            selectedStyle === 'Gothic' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            selectedStyle === 'Gothic' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <img src="https://1464501529.rsc.cdn77.org/ai_image_gen_styles/Gothic@2x.webp" alt="Gothic"
                                 class="w-10 h-10 mb-0.5 object-contain">
@@ -178,7 +178,7 @@
                         <!-- Botón Estilo: Cyberpunk -->
                         <button @click="selectStyle('Cyberpunk')" :class="[
                             'flex flex-col items-center p-1 rounded-xl focus:outline-none transition text-xs',
-                            selectedStyle === 'Cyberpunk' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            selectedStyle === 'Cyberpunk' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <img src="https://1464501529.rsc.cdn77.org/ai_image_gen_styles/Cyberpunk@2x.webp"
                                 alt="Cyberpunk" class="w-10 h-10 mb-0.5 object-contain">
@@ -188,7 +188,7 @@
                         <!-- Botón Estilo: Painting -->
                         <button @click="selectStyle('Painting')" :class="[
                             'flex flex-col items-center p-1 rounded-xl focus:outline-none transition text-xs',
-                            selectedStyle === 'Painting' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            selectedStyle === 'Painting' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <img src="https://1464501529.rsc.cdn77.org/ai_image_gen_styles/Painting@2x.webp"
                                 alt="Painting" class="w-10 h-10 mb-0.5 object-contain">
@@ -198,7 +198,7 @@
                         <!-- Botón Estilo: Surreal -->
                         <button @click="selectStyle('Surreal')" :class="[
                             'flex flex-col items-center p-1 rounded-xl focus:outline-none transition text-xs',
-                            selectedStyle === 'Surreal' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            selectedStyle === 'Surreal' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <img src="https://1464501529.rsc.cdn77.org/ai_image_gen_styles/Surreal@2x.webp"
                                 alt="Surreal" class="w-10 h-10 mb-0.5 object-contain">
@@ -208,7 +208,7 @@
                         <!-- Botón Estilo: Digital Art -->
                         <button @click="selectStyle('Digital Art')" :class="[
                             'flex flex-col items-center p-1 rounded-xl focus:outline-none transition text-xs',
-                            selectedStyle === 'Digital Art' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+                            selectedStyle === 'Digital Art' ? 'bg-white bg-opacity-20 text-white hover:bg-white/30' : 'bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600'
                         ]">
                             <img src="https://1464501529.rsc.cdn77.org/ai_image_gen_styles/Digital%20Art@2x.webp"
                                 alt="Digital Art" class="w-10 h-10 mb-0.5 object-contain">
@@ -237,7 +237,7 @@
                 <!-- Footer con Botón Generar -->
                 <div class="mt-6">
                     <button :disabled="!isGenerateEnabled || isLoading" @click="generateImage"
-                        class="w-full px-4 py-2 bg-blue-600 text-white rounded-xl disabled:opacity-50 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 transition flex items-center justify-center text-sm">
+                        class="w-full px-4 py-2 bg-white bg-opacity-20 text-white rounded-xl disabled:opacity-50 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-blue-700 transition flex items-center justify-center text-sm">
                         <!-- Mostrar Spinner si está cargando -->
                         <span v-if="!isLoading">Generate</span>
                         <svg v-else xmlns="http://www.w3.org/2000/svg" class="animate-spin h-4 w-4 mr-1 text-white"

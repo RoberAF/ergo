@@ -5,7 +5,7 @@
 
 <script>
 import * as THREE from 'three';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 export default {
@@ -56,11 +56,11 @@ export default {
       const clock = new THREE.Clock();
 
       // Cargar el modelo 3D
-      const loader = new FBXLoader();
+      const loader = new GLTFLoader();
       loader.load(
-        '/src/assets/models/Idle.fbx', // Ruta correcta desde la carpeta public
-        (fbx) => {
-          const model = fbx;
+        '/src/assets/models/ana_idle.glb', // Ruta correcta desde la carpeta public
+        (gltf) => {
+          const model = gltf.scene;
 
           // Posición del modelo
           model.position.set(0, -5.5, 1);
@@ -73,8 +73,8 @@ export default {
 
           // Configurar el AnimationMixer
           mixer = new THREE.AnimationMixer(model);
-          if (fbx.animations && fbx.animations.length) {
-            fbx.animations.forEach((clip) => {
+          if (gltf.animations && gltf.animations.length) {
+            gltf.animations.forEach((clip) => {
               const action = mixer.clipAction(clip);
               action.play();
             });

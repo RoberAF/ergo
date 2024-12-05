@@ -1,12 +1,12 @@
 // src/router/index.js
 
 import { createRouter, createWebHistory } from 'vue-router';
-import Chat from '../components/Chat.vue';
+// import Chat from '../components/Chat.vue';
 import Actividades from '../components/Actividades.vue';
 import Selfie from '../components/Selfie.vue';
 import ImagenesIA from '../components/ImagenesIA.vue';
 // import Memoria from '../components/Memoria.vue';
-// import Diario from '../components/Diario.vue';
+import Diario from '../components/Diario.vue';
 // import Perfil from '../components/Perfil.vue';
 // import NotFound from '../components/NotFound.vue'; // Componente para rutas no encontradas
 
@@ -35,11 +35,11 @@ const routes = [
   //   name: 'memoria',
   //   component: Memoria
   // },
-  // {
-  //   path: '/diario',
-  //   name: 'diario',
-  //   component: Diario
-  // },
+  {
+    path: '/diario',
+    name: 'diario',
+    component: Diario
+  },
   // {
   //   path: '/perfil',
   //   name: 'perfil',
