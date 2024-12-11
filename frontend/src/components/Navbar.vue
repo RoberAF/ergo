@@ -21,13 +21,13 @@
         <span class="text-sm font-bold">Actividades</span>
       </router-link>
 
-      <!-- Item de Navegación: Memoria -->
+      <!-- Item de Navegación: Consciencia -->
       <router-link
-        to="/memoria"
+        to="/consciencia"
         class="flex flex-col items-center cursor-pointer px-4 py-2 bg-opacity-0 backdrop-blur-lg rounded-xl hover:bg-white/30 transition-colors duration-200"
-        :class="{ 'bg-slate-500': isActive('/memoria') }"
+        :class="{ 'bg-slate-500': isActive('/consciencia') }"
       >
-        <span class="text-sm font-bold">Memoria</span>
+        <span class="text-sm font-bold">Consciencia</span>
       </router-link>
 
       <!-- Item de Navegación: Diario -->

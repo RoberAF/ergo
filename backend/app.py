@@ -160,35 +160,31 @@ def handle_message():
 @app.route('/generate-image', methods=['POST'])
 def generate_image():
     try:
-        data = request.get_json()
-        logging.info(f"Datos recibidos para generación de imagen: {data}")  # Depuración
-
-        prompt = data.get('prompt', '')
+        prompt = request.form.get('prompt', '')
+        # aspectRatio, style y referenceImage si las envías
+        aspect_ratio = request.form.get('aspectRatio', 'portrait')
+        style = request.form.get('style', 'No style')
+        # Si envías la imagen como archivo:
+        # reference_image = request.files.get('referenceImage')
 
         if not prompt:
             return jsonify({'error': 'No se proporcionó ningún prompt.'}), 400
 
-        # Generar imagen usando Hugging Face
         image = client_image.text_to_image(prompt)
 
         if isinstance(image, Image.Image):
-            # Convertir la imagen a bytes
             buffered = BytesIO()
             image.save(buffered, format="PNG")
             img_bytes = buffered.getvalue()
-
-            # Codificar la imagen en base64
             img_base64 = base64.b64encode(img_bytes).decode('utf-8')
-
-            # Devolver la imagen codificada en base64
             return jsonify({'image': img_base64}), 200
         else:
-            logging.error("La respuesta de la API de generación de imágenes no es una imagen válida.")
             return jsonify({'error': 'Error al generar la imagen.'}), 500
 
     except Exception as e:
         logging.error(f"Error al generar la imagen: {e}")
         return jsonify({'error': 'Hubo un error al generar la imagen.'}), 500
+
 
 # Ruta para obtener todas las entradas del diario
 @app.route('/diarios', methods=['GET'])
@@ -355,8 +351,7 @@ def scheduled_task():
     finally:
         session.close()
 
-# Programar la tarea para que se ejecute cada 5 minutos usando 'interval'
-scheduler.add_job(scheduled_task, 'interval', minutes=5, id='generate_diary')
+scheduler.add_job(scheduled_task, 'cron', hour=0, id='generate_diary')
 
 # Iniciar el scheduler
 scheduler.start()
