@@ -5,7 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Actividades from '../components/Actividades.vue';
 import Selfie from '../components/Selfie.vue';
 import ImagenesIA from '../components/ImagenesIA.vue';
-// import Memoria from '../components/Memoria.vue';
+import Consciencia from '../components/Consciencia.vue';
 import Diario from '../components/Diario.vue';
 // import Perfil from '../components/Perfil.vue';
 // import NotFound from '../components/NotFound.vue'; // Componente para rutas no encontradas
@@ -30,11 +30,11 @@ const routes = [
     name: 'ImagenesIA',
     component: ImagenesIA,
   },
-  // {
-  //   path: '/memoria',
-  //   name: 'memoria',
-  //   component: Memoria
-  // },
+  {
+    path: '/consciencia',
+    name: 'consciencia',
+    component: Consciencia
+  },
   {
     path: '/diario',
     name: 'diario',
@@ -54,7 +54,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL), // Corrección del typo aquí
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 });
 

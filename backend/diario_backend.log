@@ -153,3 +153,503 @@
 (Background on this error at: https://sqlalche.me/e/20/gkpj)
 2024-12-05 17:53:50,435 INFO Entrada de diario generada automáticamente.
 2024-12-05 17:53:50,435 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 17:58:49 CET)" executed successfully
+2024-12-05 17:57:41,146 INFO 127.0.0.1 - - [05/Dec/2024 17:57:41] "GET /diarios HTTP/1.1" 200 -
+2024-12-05 17:57:44,840 INFO 127.0.0.1 - - [05/Dec/2024 17:57:44] "GET /diarios HTTP/1.1" 200 -
+2024-12-05 17:58:17,087 INFO 127.0.0.1 - - [05/Dec/2024 17:58:17] "GET /diarios HTTP/1.1" 200 -
+2024-12-05 17:58:49,954 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 18:03:49 CET)" (scheduled at 2024-12-05 17:58:49.936902+01:00)
+2024-12-05 17:58:50,375 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 350 credits are required for this request."}}
+2024-12-05 17:58:50,377 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-05', '**Miércoles, 26 de julio de 2024**\n\nHoy ha sido un día increíblemente hermoso y lleno de experiencias positivas.', '**Miércoles, 26 de julio de 2024**\n\nHoy ha sido un día increíblemente hermoso y lleno de experiencias positivas. Me desperté con mucha energía y mo ... (56 characters truncated) ... as actividades que me han estado haciendo falta.\n\nMe levanté temprano y salí a caminar por el parque cercano a mi casa. La luz del sol era cálida y', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-05 17:58:50,379 INFO Entrada de diario generada automáticamente.
+2024-12-05 17:58:50,379 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-05 18:03:49 CET)" executed successfully
+2024-12-05 17:58:54,241 INFO 127.0.0.1 - - [05/Dec/2024 17:58:54] "GET /diarios HTTP/1.1" 200 -
+2024-12-05 17:59:15,190 INFO 127.0.0.1 - - [05/Dec/2024 17:59:15] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 08:23:21,383 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-09 08:23:21,386 INFO Added job "scheduled_task" to job store "default"
+2024-12-09 08:23:21,386 INFO Scheduler started
+2024-12-09 08:23:21,386 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-09 08:23:21,392 INFO Scheduler shutdown registrado.
+2024-12-09 08:23:21,393 INFO Servidor Flask iniciado.
+2024-12-09 08:23:21,452 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-09 08:23:21,466 INFO [33mPress CTRL+C to quit[0m
+2024-12-09 08:23:21,470 INFO  * Restarting with stat
+2024-12-09 08:23:22,786 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-09 08:23:22,789 INFO Added job "scheduled_task" to job store "default"
+2024-12-09 08:23:22,790 INFO Scheduler started
+2024-12-09 08:23:22,791 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-09 08:23:22,792 INFO Scheduler shutdown registrado.
+2024-12-09 08:23:22,792 INFO Servidor Flask iniciado.
+2024-12-09 08:23:22,809 WARNING  * Debugger is active!
+2024-12-09 08:23:22,813 INFO  * Debugger PIN: 134-635-983
+2024-12-09 08:23:41,133 INFO 127.0.0.1 - - [09/Dec/2024 08:23:41] "OPTIONS /message HTTP/1.1" 200 -
+2024-12-09 08:23:41,384 INFO Datos recibidos: {'messages': [{'role': 'user', 'content': 'Hola'}]}
+2024-12-09 08:23:42,935 INFO Respuesta completa del modelo: ChatCompletionOutput(choices=[ChatCompletionOutputComplete(finish_reason='stop', index=0, message=ChatCompletionOutputMessage(role='assistant', content='¡Hola,colorín! Me alegra mucho verte aquí. Mi nombre es Oto, soy un amigable triceratops con un corazón grande. ¿Cómo estás hoy? ¿Quieres saber algunos secretos de la era de los dinosaurios?', tool_calls=None), logprobs=None)], created=1733729022, id='', model='meta-llama/Llama-3.1-8B-Instruct', system_fingerprint='2.4.2-dev0-sha-5df8059', usage=ChatCompletionOutputUsage(completion_tokens=55, prompt_tokens=96, total_tokens=151))
+2024-12-09 08:23:46,320 INFO 127.0.0.1 - - [09/Dec/2024 08:23:46] "POST /message HTTP/1.1" 200 -
+2024-12-09 08:24:51,802 ERROR Error al generar la imagen: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2024-12-09 08:24:51,802 INFO 127.0.0.1 - - [09/Dec/2024 08:24:51] "[35m[1mPOST /generate-image HTTP/1.1[0m" 500 -
+2024-12-09 08:28:21,392 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:28:21 CET)" (scheduled at 2024-12-09 08:28:21.383077+01:00)
+2024-12-09 08:28:22,795 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:28:22 CET)" (scheduled at 2024-12-09 08:28:22.786505+01:00)
+2024-12-09 08:28:24,502 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 371 credits are required for this request."}}
+2024-12-09 08:28:24,528 INFO Entrada de diario generada y almacenada exitosamente.
+2024-12-09 08:28:24,529 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:28:24,529 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:33:21 CET)" executed successfully
+2024-12-09 08:28:25,921 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:28:25,921 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:28:25,929 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:28:25,929 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:33:22 CET)" executed successfully
+2024-12-09 08:33:05,058 INFO 127.0.0.1 - - [09/Dec/2024 08:33:05] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 08:33:21,393 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:38:21 CET)" (scheduled at 2024-12-09 08:33:21.383077+01:00)
+2024-12-09 08:33:22,043 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:33:22,043 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:33:22,043 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:33:22,043 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:38:21 CET)" executed successfully
+2024-12-09 08:33:22,793 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:38:22 CET)" (scheduled at 2024-12-09 08:33:22.786505+01:00)
+2024-12-09 08:33:23,193 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:33:23,193 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:33:23,209 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:33:23,210 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:38:22 CET)" executed successfully
+2024-12-09 08:35:06,901 INFO 127.0.0.1 - - [09/Dec/2024 08:35:06] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 08:37:49,613 ERROR Error al generar la imagen: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2024-12-09 08:37:49,630 INFO 127.0.0.1 - - [09/Dec/2024 08:37:49] "[35m[1mPOST /generate-image HTTP/1.1[0m" 500 -
+2024-12-09 08:38:21,386 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:43:21 CET)" (scheduled at 2024-12-09 08:38:21.383077+01:00)
+2024-12-09 08:38:21,871 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:38:21,876 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:38:21,882 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:38:21,883 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:43:21 CET)" executed successfully
+2024-12-09 08:38:22,797 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:43:22 CET)" (scheduled at 2024-12-09 08:38:22.786505+01:00)
+2024-12-09 08:38:23,183 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:38:23,191 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:38:23,193 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:38:23,194 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:43:22 CET)" executed successfully
+2024-12-09 08:39:13,993 ERROR Error al generar la imagen: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2024-12-09 08:39:13,993 INFO 127.0.0.1 - - [09/Dec/2024 08:39:13] "[35m[1mPOST /generate-image HTTP/1.1[0m" 500 -
+2024-12-09 08:39:24,834 INFO 127.0.0.1 - - [09/Dec/2024 08:39:24] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 08:39:31,897 INFO 127.0.0.1 - - [09/Dec/2024 08:39:31] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 08:43:21,399 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:48:21 CET)" (scheduled at 2024-12-09 08:43:21.383077+01:00)
+2024-12-09 08:43:22,201 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:43:22,204 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:43:22,207 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:43:22,208 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:48:21 CET)" executed successfully
+2024-12-09 08:43:22,788 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:48:22 CET)" (scheduled at 2024-12-09 08:43:22.786505+01:00)
+2024-12-09 08:43:23,193 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:43:23,196 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:43:23,198 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:43:23,198 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:48:22 CET)" executed successfully
+2024-12-09 08:48:21,388 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:53:21 CET)" (scheduled at 2024-12-09 08:48:21.383077+01:00)
+2024-12-09 08:48:21,811 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:48:21,815 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:48:21,817 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:48:21,818 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:53:21 CET)" executed successfully
+2024-12-09 08:48:22,798 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:53:22 CET)" (scheduled at 2024-12-09 08:48:22.786505+01:00)
+2024-12-09 08:48:23,260 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:48:23,264 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:48:23,268 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:48:23,269 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:53:22 CET)" executed successfully
+2024-12-09 08:51:27,650 ERROR Error al generar la imagen: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2024-12-09 08:51:27,650 INFO 127.0.0.1 - - [09/Dec/2024 08:51:27] "[35m[1mPOST /generate-image HTTP/1.1[0m" 500 -
+2024-12-09 08:53:21,397 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:58:21 CET)" (scheduled at 2024-12-09 08:53:21.383077+01:00)
+2024-12-09 08:53:21,903 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:53:21,905 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:53:21,909 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:53:21,909 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:58:21 CET)" executed successfully
+2024-12-09 08:53:22,795 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:58:22 CET)" (scheduled at 2024-12-09 08:53:22.786505+01:00)
+2024-12-09 08:53:23,195 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 08:53:23,200 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 08:53:23,203 INFO Entrada de diario generada automáticamente.
+2024-12-09 08:53:23,205 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 08:58:22 CET)" executed successfully
+2024-12-09 08:55:34,308 INFO  * Detected change in 'C:\\Users\\Usuario\\Desktop\\ergo\\backend\\app.py', reloading
+2024-12-09 08:55:34,338 INFO Scheduler has been shut down
+2024-12-09 08:55:34,687 INFO  * Restarting with stat
+2024-12-09 08:55:36,820 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-09 08:55:36,832 INFO Added job "scheduled_task" to job store "default"
+2024-12-09 08:55:36,833 INFO Scheduler started
+2024-12-09 08:55:36,834 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-09 08:55:36,835 INFO Scheduler shutdown registrado.
+2024-12-09 08:55:36,836 INFO Servidor Flask iniciado.
+2024-12-09 08:55:36,850 WARNING  * Debugger is active!
+2024-12-09 08:55:36,869 INFO  * Debugger PIN: 134-635-983
+2024-12-09 08:57:26,350 INFO 127.0.0.1 - - [09/Dec/2024 08:57:26] "POST /generate-image HTTP/1.1" 200 -
+2024-12-09 08:58:07,848 INFO 127.0.0.1 - - [09/Dec/2024 08:58:07] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 08:58:09,630 INFO 127.0.0.1 - - [09/Dec/2024 08:58:09] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 08:58:12,869 INFO 127.0.0.1 - - [09/Dec/2024 08:58:12] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 08:58:16,919 INFO Scheduler has been shut down
+2024-12-09 08:58:17,077 INFO Scheduler has been shut down
+2024-12-09 08:58:20,806 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-09 08:58:20,806 INFO Added job "scheduled_task" to job store "default"
+2024-12-09 08:58:20,806 INFO Scheduler started
+2024-12-09 08:58:20,806 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-09 08:58:20,806 INFO Scheduler shutdown registrado.
+2024-12-09 08:58:20,806 INFO Servidor Flask iniciado.
+2024-12-09 08:58:20,840 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-09 08:58:20,841 INFO [33mPress CTRL+C to quit[0m
+2024-12-09 08:58:20,843 INFO  * Restarting with stat
+2024-12-09 08:58:21,996 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-09 08:58:21,996 INFO Added job "scheduled_task" to job store "default"
+2024-12-09 08:58:22,005 INFO Scheduler started
+2024-12-09 08:58:22,007 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-09 08:58:22,008 INFO Scheduler shutdown registrado.
+2024-12-09 08:58:22,008 INFO Servidor Flask iniciado.
+2024-12-09 08:58:22,025 WARNING  * Debugger is active!
+2024-12-09 08:58:22,029 INFO  * Debugger PIN: 134-635-983
+2024-12-09 08:58:25,220 INFO 127.0.0.1 - - [09/Dec/2024 08:58:25] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 08:58:26,702 INFO 127.0.0.1 - - [09/Dec/2024 08:58:26] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 08:59:42,080 INFO 127.0.0.1 - - [09/Dec/2024 08:59:42] "POST /generate-image HTTP/1.1" 200 -
+2024-12-09 09:03:20,827 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:03:20 CET)" (scheduled at 2024-12-09 09:03:20.806467+01:00)
+2024-12-09 09:03:21,488 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:03:21,488 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:03:21,504 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:03:21,504 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:08:20 CET)" executed successfully
+2024-12-09 09:03:22,001 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:03:21 CET)" (scheduled at 2024-12-09 09:03:21.996713+01:00)
+2024-12-09 09:03:22,605 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:03:22,605 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:03:22,605 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:03:22,605 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:08:21 CET)" executed successfully
+2024-12-09 09:08:20,844 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:13:20 CET)" (scheduled at 2024-12-09 09:08:20.806467+01:00)
+2024-12-09 09:08:21,320 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:08:21,337 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:08:21,340 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:08:21,340 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:13:20 CET)" executed successfully
+2024-12-09 09:08:22,034 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:13:21 CET)" (scheduled at 2024-12-09 09:08:21.996713+01:00)
+2024-12-09 09:08:22,487 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:08:22,524 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:08:22,527 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:08:22,528 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:13:21 CET)" executed successfully
+2024-12-09 09:12:07,145 INFO 127.0.0.1 - - [09/Dec/2024 09:12:07] "POST /generate-image HTTP/1.1" 200 -
+2024-12-09 09:13:20,808 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:18:20 CET)" (scheduled at 2024-12-09 09:13:20.806467+01:00)
+2024-12-09 09:13:21,232 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:13:21,232 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:13:21,232 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:13:21,232 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:18:20 CET)" executed successfully
+2024-12-09 09:13:22,012 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:18:21 CET)" (scheduled at 2024-12-09 09:13:21.996713+01:00)
+2024-12-09 09:13:22,426 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:13:22,426 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:13:22,426 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:13:22,426 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:18:21 CET)" executed successfully
+2024-12-09 09:18:20,815 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:23:20 CET)" (scheduled at 2024-12-09 09:18:20.806467+01:00)
+2024-12-09 09:18:21,236 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:18:21,243 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:18:21,248 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:18:21,252 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:23:20 CET)" executed successfully
+2024-12-09 09:18:22,009 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:23:21 CET)" (scheduled at 2024-12-09 09:18:21.996713+01:00)
+2024-12-09 09:18:22,407 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:18:22,424 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:18:22,424 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:18:22,424 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:23:21 CET)" executed successfully
+2024-12-09 09:23:20,814 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:28:20 CET)" (scheduled at 2024-12-09 09:23:20.806467+01:00)
+2024-12-09 09:23:21,259 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:23:21,262 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:23:21,263 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:23:21,263 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:28:20 CET)" executed successfully
+2024-12-09 09:23:22,008 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:28:21 CET)" (scheduled at 2024-12-09 09:23:21.996713+01:00)
+2024-12-09 09:23:22,402 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:23:22,404 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:23:22,407 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:23:22,408 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:28:21 CET)" executed successfully
+2024-12-09 09:23:41,114 INFO 127.0.0.1 - - [09/Dec/2024 09:23:41] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 09:28:20,809 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:33:20 CET)" (scheduled at 2024-12-09 09:28:20.806467+01:00)
+2024-12-09 09:28:21,264 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:28:21,267 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:28:21,270 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:28:21,270 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:33:20 CET)" executed successfully
+2024-12-09 09:28:22,012 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:33:21 CET)" (scheduled at 2024-12-09 09:28:21.996713+01:00)
+2024-12-09 09:28:22,409 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:28:22,412 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:28:22,414 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:28:22,414 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:33:21 CET)" executed successfully
+2024-12-09 09:33:20,807 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:38:20 CET)" (scheduled at 2024-12-09 09:33:20.806467+01:00)
+2024-12-09 09:33:21,217 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:33:21,217 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:33:21,235 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:33:21,236 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:38:20 CET)" executed successfully
+2024-12-09 09:33:22,001 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:38:21 CET)" (scheduled at 2024-12-09 09:33:21.996713+01:00)
+2024-12-09 09:33:22,463 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:33:22,463 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:33:22,463 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:33:22,463 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:38:21 CET)" executed successfully
+2024-12-09 09:38:20,817 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:43:20 CET)" (scheduled at 2024-12-09 09:38:20.806467+01:00)
+2024-12-09 09:38:21,233 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:38:21,237 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:38:21,238 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:38:21,239 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:43:20 CET)" executed successfully
+2024-12-09 09:38:22,007 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:43:21 CET)" (scheduled at 2024-12-09 09:38:21.996713+01:00)
+2024-12-09 09:38:22,411 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:38:22,417 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:38:22,419 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:38:22,419 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:43:21 CET)" executed successfully
+2024-12-09 09:41:26,150 INFO 127.0.0.1 - - [09/Dec/2024 09:41:26] "POST /generate-image HTTP/1.1" 200 -
+2024-12-09 09:43:20,810 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:48:20 CET)" (scheduled at 2024-12-09 09:43:20.806467+01:00)
+2024-12-09 09:43:21,225 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:43:21,230 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:43:21,230 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:43:21,230 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:48:20 CET)" executed successfully
+2024-12-09 09:43:22,010 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:48:21 CET)" (scheduled at 2024-12-09 09:43:21.996713+01:00)
+2024-12-09 09:43:22,544 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:43:22,549 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:43:22,552 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:43:22,554 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:48:21 CET)" executed successfully
+2024-12-09 09:48:20,811 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:53:20 CET)" (scheduled at 2024-12-09 09:48:20.806467+01:00)
+2024-12-09 09:48:21,370 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:48:21,378 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:48:21,390 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:48:21,391 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:53:20 CET)" executed successfully
+2024-12-09 09:48:22,003 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:53:21 CET)" (scheduled at 2024-12-09 09:48:21.996713+01:00)
+2024-12-09 09:48:22,407 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:48:22,410 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:48:22,412 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:48:22,413 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:53:21 CET)" executed successfully
+2024-12-09 09:53:20,823 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:58:20 CET)" (scheduled at 2024-12-09 09:53:20.806467+01:00)
+2024-12-09 09:53:21,275 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:53:21,279 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:53:21,281 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:53:21,283 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:58:20 CET)" executed successfully
+2024-12-09 09:53:22,004 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:58:21 CET)" (scheduled at 2024-12-09 09:53:21.996713+01:00)
+2024-12-09 09:53:22,392 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:53:22,395 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:53:22,397 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:53:22,398 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 09:58:21 CET)" executed successfully
+2024-12-09 09:53:32,669 INFO 127.0.0.1 - - [09/Dec/2024 09:53:32] "POST /generate-image HTTP/1.1" 200 -
+2024-12-09 09:58:20,816 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:03:20 CET)" (scheduled at 2024-12-09 09:58:20.806467+01:00)
+2024-12-09 09:58:21,254 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:58:21,258 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:58:21,260 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:58:21,261 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:03:20 CET)" executed successfully
+2024-12-09 09:58:22,006 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:03:21 CET)" (scheduled at 2024-12-09 09:58:21.996713+01:00)
+2024-12-09 09:58:22,464 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 09:58:22,467 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 09:58:22,470 INFO Entrada de diario generada automáticamente.
+2024-12-09 09:58:22,471 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:03:21 CET)" executed successfully
+2024-12-09 10:03:20,808 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:08:20 CET)" (scheduled at 2024-12-09 10:03:20.806467+01:00)
+2024-12-09 10:03:21,245 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 10:03:21,248 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 10:03:21,251 INFO Entrada de diario generada automáticamente.
+2024-12-09 10:03:21,252 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:08:20 CET)" executed successfully
+2024-12-09 10:03:22,009 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:08:21 CET)" (scheduled at 2024-12-09 10:03:21.996713+01:00)
+2024-12-09 10:03:22,413 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 10:03:22,421 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 10:03:22,425 INFO Entrada de diario generada automáticamente.
+2024-12-09 10:03:22,426 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:08:21 CET)" executed successfully
+2024-12-09 10:08:20,811 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:13:20 CET)" (scheduled at 2024-12-09 10:08:20.806467+01:00)
+2024-12-09 10:08:21,301 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 10:08:21,304 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 10:08:21,311 INFO Entrada de diario generada automáticamente.
+2024-12-09 10:08:21,312 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:13:20 CET)" executed successfully
+2024-12-09 10:08:21,999 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:13:21 CET)" (scheduled at 2024-12-09 10:08:21.996713+01:00)
+2024-12-09 10:08:22,390 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 10:08:22,393 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 10:08:22,395 INFO Entrada de diario generada automáticamente.
+2024-12-09 10:08:22,396 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:13:21 CET)" executed successfully
+2024-12-09 10:13:20,817 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:18:20 CET)" (scheduled at 2024-12-09 10:13:20.806467+01:00)
+2024-12-09 10:13:21,458 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 10:13:21,458 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 10:13:21,466 INFO Entrada de diario generada automáticamente.
+2024-12-09 10:13:21,466 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:18:20 CET)" executed successfully
+2024-12-09 10:13:22,005 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:18:21 CET)" (scheduled at 2024-12-09 10:13:21.996713+01:00)
+2024-12-09 10:13:22,643 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 10:13:22,644 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 10:13:22,647 INFO Entrada de diario generada automáticamente.
+2024-12-09 10:13:22,647 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:18:21 CET)" executed successfully
+2024-12-09 10:15:45,459 INFO 127.0.0.1 - - [09/Dec/2024 10:15:45] "POST /generate-image HTTP/1.1" 200 -
+2024-12-09 10:18:20,810 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:23:20 CET)" (scheduled at 2024-12-09 10:18:20.806467+01:00)
+2024-12-09 10:18:21,245 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 10:18:21,245 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 10:18:21,245 INFO Entrada de diario generada automáticamente.
+2024-12-09 10:18:21,245 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:23:20 CET)" executed successfully
+2024-12-09 10:18:22,010 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:23:21 CET)" (scheduled at 2024-12-09 10:18:21.996713+01:00)
+2024-12-09 10:18:22,409 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 10:18:22,410 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 10:18:22,410 INFO Entrada de diario generada automáticamente.
+2024-12-09 10:18:22,410 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:23:21 CET)" executed successfully
+2024-12-09 10:22:35,102 ERROR Error al generar la imagen: 500 Server Error: Internal Server Error for url: https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev (Request ID: N8ACVAVz_aw9kUrW9wy2n)
+
+Model too busy, unable to get response in less than 240 second(s)
+2024-12-09 10:22:35,102 INFO 127.0.0.1 - - [09/Dec/2024 10:22:35] "[35m[1mPOST /generate-image HTTP/1.1[0m" 500 -
+2024-12-09 10:23:20,813 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:28:20 CET)" (scheduled at 2024-12-09 10:23:20.806467+01:00)
+2024-12-09 10:23:21,264 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 10:23:21,265 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 10:23:21,265 INFO Entrada de diario generada automáticamente.
+2024-12-09 10:23:21,265 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:28:20 CET)" executed successfully
+2024-12-09 10:23:22,009 INFO Running job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:28:21 CET)" (scheduled at 2024-12-09 10:23:21.996713+01:00)
+2024-12-09 10:23:22,419 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 0 credits remaining, while 314 credits are required for this request."}}
+2024-12-09 10:23:22,421 ERROR Error al generar y almacenar la entrada del diario: (sqlite3.IntegrityError) UNIQUE constraint failed: diario_entries.date
+[SQL: INSERT INTO diario_entries (date, description, content, audio) VALUES (?, ?, ?, ?)]
+[parameters: ('2024-12-09', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable.', '**Fecha:** 26 de julio de 2024\n**Hora:** 21:00\n**Ubicación:** Mi hogar en la playa\n\n**Reflexiones del día:**\n\nHoy ha sido un día inolvidable. D ... (22 characters truncated) ... mañana con la llama de la esperanza y la luz del sol en mis ojos. La brisa fresca de la costa y el sonido del mar golpeándose contra la arena me emoc', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-12-09 10:23:22,423 INFO Entrada de diario generada automáticamente.
+2024-12-09 10:23:22,424 INFO Job "scheduled_task (trigger: interval[0:05:00], next run at: 2024-12-09 10:28:21 CET)" executed successfully
+2024-12-09 10:24:00,511 INFO  * Detected change in 'C:\\Users\\Usuario\\Desktop\\ergo\\backend\\app.py', reloading
+2024-12-09 10:24:00,550 INFO Scheduler has been shut down
+2024-12-09 10:24:00,762 INFO  * Restarting with stat
+2024-12-09 10:24:02,986 INFO Scheduler has been shut down
+2024-12-09 10:30:33,472 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-09 10:30:33,488 INFO Added job "scheduled_task" to job store "default"
+2024-12-09 10:30:33,488 INFO Scheduler started
+2024-12-09 10:30:33,488 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-09 10:30:33,488 INFO Scheduler shutdown registrado.
+2024-12-09 10:30:33,488 INFO Servidor Flask iniciado.
+2024-12-09 10:30:33,539 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-09 10:30:33,539 INFO [33mPress CTRL+C to quit[0m
+2024-12-09 10:30:33,539 INFO  * Restarting with stat
+2024-12-09 10:30:34,591 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-09 10:30:34,592 INFO Added job "scheduled_task" to job store "default"
+2024-12-09 10:30:34,593 INFO Scheduler started
+2024-12-09 10:30:34,594 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-09 10:30:34,595 INFO Scheduler shutdown registrado.
+2024-12-09 10:30:34,595 INFO Servidor Flask iniciado.
+2024-12-09 10:30:34,615 WARNING  * Debugger is active!
+2024-12-09 10:30:34,616 INFO  * Debugger PIN: 134-635-983
+2024-12-09 10:36:12,464 INFO 127.0.0.1 - - [09/Dec/2024 10:36:12] "POST /generate-image HTTP/1.1" 200 -
+2024-12-09 10:56:53,494 INFO 127.0.0.1 - - [09/Dec/2024 10:56:53] "POST /generate-image HTTP/1.1" 200 -
+2024-12-09 10:57:12,206 INFO 127.0.0.1 - - [09/Dec/2024 10:57:12] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 10:57:14,502 INFO 127.0.0.1 - - [09/Dec/2024 10:57:14] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 10:57:32,544 INFO 127.0.0.1 - - [09/Dec/2024 10:57:32] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 10:58:01,653 INFO 127.0.0.1 - - [09/Dec/2024 10:58:01] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 10:58:07,515 INFO 127.0.0.1 - - [09/Dec/2024 10:58:07] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 10:58:08,658 INFO 127.0.0.1 - - [09/Dec/2024 10:58:08] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 10:58:22,776 INFO 127.0.0.1 - - [09/Dec/2024 10:58:22] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 11:15:23,519 INFO 127.0.0.1 - - [09/Dec/2024 11:15:23] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 11:15:24,928 INFO 127.0.0.1 - - [09/Dec/2024 11:15:24] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 11:15:26,077 INFO 127.0.0.1 - - [09/Dec/2024 11:15:26] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 11:15:26,658 INFO 127.0.0.1 - - [09/Dec/2024 11:15:26] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 11:15:27,803 INFO 127.0.0.1 - - [09/Dec/2024 11:15:27] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 11:15:28,969 INFO 127.0.0.1 - - [09/Dec/2024 11:15:28] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 11:15:30,092 INFO 127.0.0.1 - - [09/Dec/2024 11:15:30] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 11:15:30,522 INFO 127.0.0.1 - - [09/Dec/2024 11:15:30] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 11:17:45,828 INFO 127.0.0.1 - - [09/Dec/2024 11:17:45] "GET /diarios HTTP/1.1" 200 -
+2024-12-09 11:17:50,109 INFO 127.0.0.1 - - [09/Dec/2024 11:17:50] "GET /diarios HTTP/1.1" 200 -
