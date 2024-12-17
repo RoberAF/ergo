@@ -58,7 +58,7 @@ export default {
       // Cargar el modelo 3D
       const loader = new GLTFLoader();
       loader.load(
-        '/src/assets/models/ana_idle.glb', // Ruta correcta desde la carpeta public
+        '/models/ana_idle.glb/', // Ruta correcta desde la carpeta public
         (gltf) => {
           const model = gltf.scene;
 
