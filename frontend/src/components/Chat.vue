@@ -63,7 +63,7 @@ export default {
       isLoading.value = true;
 
       try {
-        const response = await axios.post('http://localhost:5000/message', {
+        const response = await axios.post('http://90.164.240.100:5000/message', {
           messages: messages,
         });
 
