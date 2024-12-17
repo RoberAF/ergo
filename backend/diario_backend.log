@@ -653,3 +653,34 @@ Model too busy, unable to get response in less than 240 second(s)
 2024-12-09 11:15:30,522 INFO 127.0.0.1 - - [09/Dec/2024 11:15:30] "GET /diarios HTTP/1.1" 200 -
 2024-12-09 11:17:45,828 INFO 127.0.0.1 - - [09/Dec/2024 11:17:45] "GET /diarios HTTP/1.1" 200 -
 2024-12-09 11:17:50,109 INFO 127.0.0.1 - - [09/Dec/2024 11:17:50] "GET /diarios HTTP/1.1" 200 -
+2024-12-17 22:01:48,123 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-17 22:01:48,136 INFO Added job "scheduled_task" to job store "default"
+2024-12-17 22:01:48,136 INFO Scheduler started
+2024-12-17 22:01:48,137 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-17 22:01:48,137 INFO Scheduler shutdown registrado.
+2024-12-17 22:01:48,137 INFO Servidor Flask iniciado.
+2024-12-17 22:01:48,232 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-17 22:01:48,233 INFO [33mPress CTRL+C to quit[0m
+2024-12-17 22:01:48,235 INFO  * Restarting with stat
+2024-12-17 22:01:49,851 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-17 22:01:49,855 INFO Added job "scheduled_task" to job store "default"
+2024-12-17 22:01:49,856 INFO Scheduler started
+2024-12-17 22:01:49,856 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-17 22:01:49,857 INFO Scheduler shutdown registrado.
+2024-12-17 22:01:49,857 INFO Servidor Flask iniciado.
+2024-12-17 22:01:49,880 WARNING  * Debugger is active!
+2024-12-17 22:01:49,884 INFO  * Debugger PIN: 124-874-587
+2024-12-17 22:30:41,460 INFO  * Detected change in 'C:\\Users\\ralva\\Desktop\\ergo\\backend\\app.py', reloading
+2024-12-17 22:30:41,462 INFO Scheduler has been shut down
+2024-12-17 22:30:41,576 INFO  * Restarting with stat
+2024-12-17 22:30:43,395 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-17 22:30:43,399 INFO Added job "scheduled_task" to job store "default"
+2024-12-17 22:30:43,399 INFO Scheduler started
+2024-12-17 22:30:43,400 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-17 22:30:43,400 INFO Scheduler shutdown registrado.
+2024-12-17 22:30:43,400 INFO Servidor Flask iniciado.
+2024-12-17 22:30:43,428 WARNING  * Debugger is active!
+2024-12-17 22:30:43,432 INFO  * Debugger PIN: 124-874-587
+2024-12-17 22:30:55,697 INFO Scheduler has been shut down
+2024-12-17 22:30:55,810 INFO Scheduler has been shut down

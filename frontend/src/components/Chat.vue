@@ -63,7 +63,7 @@ export default {
       isLoading.value = true;
 
       try {
-        const response = await axios.post('http://90.164.240.100:5000/message', {
+        const response = await axios.post('https://5c1e-90-164-240-100.ngrok-free.app/message', {
           messages: messages,
         });
 

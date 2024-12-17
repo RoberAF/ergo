@@ -363,4 +363,4 @@ logging.info("Scheduler shutdown registrado.")
 
 if __name__ == '__main__':
     logging.info("Servidor Flask iniciado.")
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
