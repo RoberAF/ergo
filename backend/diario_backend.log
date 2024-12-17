@@ -684,3 +684,32 @@ Model too busy, unable to get response in less than 240 second(s)
 2024-12-17 22:30:43,432 INFO  * Debugger PIN: 124-874-587
 2024-12-17 22:30:55,697 INFO Scheduler has been shut down
 2024-12-17 22:30:55,810 INFO Scheduler has been shut down
+2024-12-17 22:30:58,752 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-17 22:30:58,756 INFO Added job "scheduled_task" to job store "default"
+2024-12-17 22:30:58,756 INFO Scheduler started
+2024-12-17 22:30:58,757 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-17 22:30:58,757 INFO Scheduler shutdown registrado.
+2024-12-17 22:30:58,757 INFO Servidor Flask iniciado.
+2024-12-17 22:30:58,794 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.89:5000
+2024-12-17 22:30:58,794 INFO [33mPress CTRL+C to quit[0m
+2024-12-17 22:30:58,797 INFO  * Restarting with stat
+2024-12-17 22:31:00,417 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-17 22:31:00,421 INFO Added job "scheduled_task" to job store "default"
+2024-12-17 22:31:00,421 INFO Scheduler started
+2024-12-17 22:31:00,422 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-17 22:31:00,422 INFO Scheduler shutdown registrado.
+2024-12-17 22:31:00,422 INFO Servidor Flask iniciado.
+2024-12-17 22:31:00,447 WARNING  * Debugger is active!
+2024-12-17 22:31:00,450 INFO  * Debugger PIN: 124-874-587
+2024-12-17 22:31:14,982 INFO 90.164.240.100 - - [17/Dec/2024 22:31:14] "[33mGET / HTTP/1.1[0m" 404 -
+2024-12-17 22:31:15,658 INFO 90.164.240.100 - - [17/Dec/2024 22:31:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-17 22:31:34,214 INFO 90.164.240.100 - - [17/Dec/2024 22:31:34] "[31m[1mGET /message HTTP/1.1[0m" 405 -
+2024-12-17 22:32:58,319 INFO 90.164.240.100 - - [17/Dec/2024 22:32:58] "[33mGET / HTTP/1.1[0m" 404 -
+2024-12-17 22:32:58,396 INFO 90.164.240.100 - - [17/Dec/2024 22:32:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-17 22:33:13,465 INFO 90.164.240.100 - - [17/Dec/2024 22:33:13] "[31m[1mGET /message HTTP/1.1[0m" 405 -
+2024-12-17 23:00:19,112 INFO 127.0.0.1 - - [17/Dec/2024 23:00:19] "[33mGET / HTTP/1.1[0m" 404 -
+2024-12-17 23:00:19,441 INFO 127.0.0.1 - - [17/Dec/2024 23:00:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-17 23:00:24,025 INFO 127.0.0.1 - - [17/Dec/2024 23:00:24] "[31m[1mGET /message HTTP/1.1[0m" 405 -
