@@ -832,3 +832,23 @@ Model too busy, unable to get response in less than 240 second(s)
 2024-12-18 02:20:59,000 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 22 credits remaining, while 250 credits are required for this request."}}
 2024-12-18 02:20:59,002 INFO 127.0.0.1 - - [18/Dec/2024 02:20:59] "[35m[1mPOST /message HTTP/1.1[0m" 500 -
 2024-12-18 02:50:51,528 INFO 90.164.240.100 - - [18/Dec/2024 02:50:51] "[31m[1mGET /message HTTP/1.1[0m" 405 -
+2024-12-18 13:33:48,533 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-18 13:33:48,536 INFO Added job "scheduled_task" to job store "default"
+2024-12-18 13:33:48,536 INFO Scheduler started
+2024-12-18 13:33:48,537 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-18 13:33:48,537 INFO Scheduler shutdown registrado.
+2024-12-18 13:33:48,537 INFO Servidor Flask iniciado.
+2024-12-18 13:33:48,577 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.89:5000
+2024-12-18 13:33:48,577 INFO [33mPress CTRL+C to quit[0m
+2024-12-18 13:33:48,579 INFO  * Restarting with stat
+2024-12-18 13:33:50,034 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-18 13:33:50,038 INFO Added job "scheduled_task" to job store "default"
+2024-12-18 13:33:50,038 INFO Scheduler started
+2024-12-18 13:33:50,039 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-18 13:33:50,039 INFO Scheduler shutdown registrado.
+2024-12-18 13:33:50,039 INFO Servidor Flask iniciado.
+2024-12-18 13:33:50,063 WARNING  * Debugger is active!
+2024-12-18 13:33:50,069 INFO  * Debugger PIN: 124-874-587
