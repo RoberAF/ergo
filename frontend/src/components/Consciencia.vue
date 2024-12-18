@@ -38,41 +38,38 @@
         <div class="flex-1 flex overflow-hidden">
           <!-- Columna Izquierda: Categorías -->
           <div class="w-1/3 border-r border-slate-700 overflow-y-auto p-4 scrollbar-thin scrollbar-thumb-slate-900/20 scrollbar-track-transparent">
-            <h2 class="text-sm font-medium text-gray-400 mb-2">Categories</h2>
+            <h2 class="text-sm font-medium text-gray-400 mb-2">Categorias</h2>
             <div class="space-y-2">
               <button class="w-full text-left px-3 py-2 bg-white bg-opacity-20 text-white rounded hover:bg-white/30 transition text-sm">
-                Family & Friends
-              </button>
-              <button class="w-full text-left px-3 py-2 bg-slate-400 bg-opacity-40 text-gray-200 rounded cursor-not-allowed text-sm">
-                Temporary
+                Familia y amigos
               </button>
               <button class="w-full text-left px-3 py-2 bg-slate-400 bg-opacity-40 text-gray-200 hover:bg-gray-600 hover:text-white transition rounded text-sm">
-                Background
+                Pasado
               </button>
               <button class="w-full text-left px-3 py-2 bg-slate-400 bg-opacity-40 text-gray-200 rounded cursor-not-allowed text-sm">
-                Favorites
+                Favoritos
               </button>
               <button class="w-full text-left px-3 py-2 bg-slate-400 bg-opacity-40 text-gray-200 rounded cursor-not-allowed text-sm">
-                Appearance
+                Apariencia
               </button>
               <button class="w-full text-left px-3 py-2 bg-slate-400 bg-opacity-40 text-gray-200 rounded cursor-not-allowed text-sm">
-                Hopes & Goals
+                Sueños y metas
               </button>
               <button class="w-full text-left px-3 py-2 bg-slate-400 bg-opacity-40 text-gray-200 rounded cursor-not-allowed text-sm">
-                Opinions
+                Opiniones
               </button>
               <button class="w-full text-left px-3 py-2 bg-slate-400 bg-opacity-40 text-gray-200 rounded cursor-not-allowed text-sm">
-                Personality
+                Personalidad
               </button>
               <button class="w-full text-left px-3 py-2 bg-slate-400 bg-opacity-40 text-gray-200 rounded cursor-not-allowed text-sm">
-                Other
+                Otros
               </button>
             </div>
           </div>
   
           <!-- Columna Derecha: Contenido -->
           <div class="w-2/3 overflow-y-auto p-4 scrollbar-thin scrollbar-thumb-slate-900/20 scrollbar-track-transparent">
-            <h2 class="text-sm font-medium text-gray-400 mb-2">Family & Friends</h2>
+            <h2 class="text-sm font-medium text-gray-400 mb-2">Familia y amigos</h2>
             <div class="space-y-2">
               <button class="flex items-center justify-between w-full px-3 py-2 bg-white bg-opacity-20 text-white rounded hover:bg-white/30 transition text-sm">
                 <span>+ Add Person</span>
@@ -85,10 +82,10 @@
               </button>
             </div>
   
-            <h2 class="text-sm font-medium text-gray-400 mt-6 mb-2">Background</h2>
+            <h2 class="text-sm font-medium text-gray-400 mt-6 mb-2">Pasado</h2>
             <div class="space-y-2">
               <div class="px-3 py-2 bg-white bg-opacity-20 text-white rounded hover:bg-white/30 transition text-sm cursor-pointer">
-                <p>Rober prefers to communicate in Spanish.</p>
+                <p>A Rober le gusta el churrasco.</p>
               </div>
             </div>
           </div>

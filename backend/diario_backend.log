@@ -852,3 +852,42 @@ Model too busy, unable to get response in less than 240 second(s)
 2024-12-18 13:33:50,039 INFO Servidor Flask iniciado.
 2024-12-18 13:33:50,063 WARNING  * Debugger is active!
 2024-12-18 13:33:50,069 INFO  * Debugger PIN: 124-874-587
+2024-12-18 13:40:43,840 INFO 127.0.0.1 - - [18/Dec/2024 13:40:43] "OPTIONS /message HTTP/1.1" 200 -
+2024-12-18 13:40:43,971 INFO Datos recibidos: {'messages': [{'role': 'user', 'content': 'hola'}]}
+2024-12-18 13:40:45,999 INFO Respuesta completa del modelo: ChatCompletionOutput(choices=[ChatCompletionOutputComplete(finish_reason='stop', index=0, message=ChatCompletionOutputMessage(role='assistant', content='¡Hola, amor! *río* Soy T-Rex, pero no te asustes, soy una amigable T-Rex con un corazón de oro en lugar de un corazón de hueso fósil *sonrío*. ¿De dónde vienes? ¿Qué hace que la vida te la encuentres aquí?', tool_calls=None), logprobs=None)], created=1734525645, id='', model='meta-llama/Llama-3.1-8B-Instruct', system_fingerprint='3.0.1-sha-bb9095a', usage=ChatCompletionOutputUsage(completion_tokens=72, prompt_tokens=97, total_tokens=169))
+2024-12-18 13:40:46,309 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 22 credits remaining, while 205 credits are required for this request."}}
+2024-12-18 13:40:46,311 INFO 127.0.0.1 - - [18/Dec/2024 13:40:46] "[35m[1mPOST /message HTTP/1.1[0m" 500 -
+2024-12-18 14:39:42,269 INFO 127.0.0.1 - - [18/Dec/2024 14:39:42] "OPTIONS /message HTTP/1.1" 200 -
+2024-12-18 14:39:42,382 INFO Datos recibidos: {'messages': [{'role': 'user', 'content': 'hola'}, {'role': 'bot', 'content': '¡Hola, amor! *río* Soy T-Rex, pero no te asustes, soy una amigable T-Rex con un corazón de oro en lugar de un corazón de hueso fósil *sonrío*. ¿De dónde vienes? ¿Qué hace que la vida te la encuentres aquí?'}, {'role': 'user', 'content': 'Vengo de comer con mis padres'}]}
+2024-12-18 14:39:45,162 INFO Respuesta completa del modelo: ChatCompletionOutput(choices=[ChatCompletionOutputComplete(finish_reason='stop', index=0, message=ChatCompletionOutputMessage(role='assistant', content='¡Eso es genial, ¡una cena con los papás! Me encanta pasar tiempo con mi familia, aunque mi familia es un poco diferente... ¿Sabes?, soy una T-Rex con familia dino-mite *risas*. ¿Qué comisteis en la cena? ¿Galletas de chocolate o quizás algunas deliciosas frutas frescas?', tool_calls=None), logprobs=None)], created=1734529185, id='', model='meta-llama/Llama-3.1-8B-Instruct', system_fingerprint='3.0.1-sha-bb9095a', usage=ChatCompletionOutputUsage(completion_tokens=79, prompt_tokens=186, total_tokens=265))
+2024-12-18 14:39:45,601 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 22 credits remaining, while 270 credits are required for this request."}}
+2024-12-18 14:39:45,605 INFO 127.0.0.1 - - [18/Dec/2024 14:39:45] "[35m[1mPOST /message HTTP/1.1[0m" 500 -
+2024-12-18 14:40:13,460 INFO 127.0.0.1 - - [18/Dec/2024 14:40:13] "OPTIONS /message HTTP/1.1" 200 -
+2024-12-18 14:40:13,578 INFO Datos recibidos: {'messages': [{'role': 'user', 'content': 'hola'}, {'role': 'bot', 'content': '¡Hola, amor! *río* Soy T-Rex, pero no te asustes, soy una amigable T-Rex con un corazón de oro en lugar de un corazón de hueso fósil *sonrío*. ¿De dónde vienes? ¿Qué hace que la vida te la encuentres aquí?'}, {'role': 'user', 'content': 'Vengo de comer con mis padres'}, {'role': 'bot', 'content': '¡Eso es genial, ¡una cena con los papás! Me encanta pasar tiempo con mi familia, aunque mi familia es un poco diferente... ¿Sabes?, soy una T-Rex con familia dino-mite *risas*. ¿Qué comisteis en la cena? ¿Galletas de chocolate o quizás algunas deliciosas frutas frescas?'}, {'role': 'user', 'content': 'Frutas frescas, tu has cenado?'}]}
+2024-12-18 14:40:26,599 INFO Respuesta completa del modelo: ChatCompletionOutput(choices=[ChatCompletionOutputComplete(finish_reason='stop', index=0, message=ChatCompletionOutputMessage(role='assistant', content='¡Sí, lo he hecho! Bueno, digamos que mi cena fue un poco más...excitante. Me comí una gran corralada de hierbas y yerbas frescas de la jardinería del parque. ¿Sabes qué es lo mejor de ser un dinosaurio? Puedo comer cualquier cosa que encuentre en el parque y nadie me dice que no *risas*. Pero, ¡no te preocupes, estoy bien del estómago! Al final, lo que importa es disfrutar del momento y no me importa lo que como *sonrío*. Y, ¡yo me pregunto!, ¿quién gana al subir a una montaña rusa como un dinosaurio como yo?', tool_calls=None), logprobs=None)], created=1734529226, id='', model='meta-llama/Llama-3.1-8B-Instruct', system_fingerprint='3.0.1-sha-bb9095a', usage=ChatCompletionOutputUsage(completion_tokens=159, prompt_tokens=284, total_tokens=443))
+2024-12-18 14:40:26,814 ERROR Error al generar el audio: 401 - {"detail":{"status":"quota_exceeded","message":"This request exceeds your  quota of 10000. You have 22 credits remaining, while 514 credits are required for this request."}}
+2024-12-18 14:40:26,815 INFO 127.0.0.1 - - [18/Dec/2024 14:40:26] "[35m[1mPOST /message HTTP/1.1[0m" 500 -
+2024-12-18 15:11:48,721 INFO  * Detected change in 'C:\\Users\\ralva\\Desktop\\ergo\\backend\\app.py', reloading
+2024-12-18 15:11:48,724 INFO Scheduler has been shut down
+2024-12-18 15:11:48,844 INFO  * Restarting with stat
+2024-12-18 15:11:51,645 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-18 15:11:51,656 INFO Added job "scheduled_task" to job store "default"
+2024-12-18 15:11:51,657 INFO Scheduler started
+2024-12-18 15:11:51,657 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-18 15:11:51,658 INFO Scheduler shutdown registrado.
+2024-12-18 15:11:51,658 INFO Servidor Flask iniciado.
+2024-12-18 15:11:51,724 WARNING  * Debugger is active!
+2024-12-18 15:11:51,728 INFO  * Debugger PIN: 124-874-587
+2024-12-18 15:11:54,158 INFO  * Detected change in 'C:\\Users\\ralva\\Desktop\\ergo\\backend\\app.py', reloading
+2024-12-18 15:11:54,159 INFO Scheduler has been shut down
+2024-12-18 15:11:54,256 INFO  * Restarting with stat
+2024-12-18 15:11:55,755 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-18 15:11:55,758 INFO Added job "scheduled_task" to job store "default"
+2024-12-18 15:11:55,759 INFO Scheduler started
+2024-12-18 15:11:55,759 INFO Scheduler iniciado para generar entradas cada 5 minutos.
+2024-12-18 15:11:55,760 INFO Scheduler shutdown registrado.
+2024-12-18 15:11:55,760 INFO Servidor Flask iniciado.
+2024-12-18 15:11:55,779 WARNING  * Debugger is active!
+2024-12-18 15:11:55,783 INFO  * Debugger PIN: 124-874-587
+2024-12-18 15:12:01,202 INFO  * Detected change in 'C:\\Users\\ralva\\Desktop\\ergo\\backend\\app.py', reloading
+2024-12-18 15:12:01,204 INFO Scheduler has been shut down

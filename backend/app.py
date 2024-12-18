@@ -92,7 +92,7 @@ def handle_message():
         # Añadir el mensaje de sistema al inicio del historial
         system_message = {
             "role": "system",
-            "content": "Finge ser una humana del país España y habla como una humana española lo haría, tienes una personalidad extrovertida, dulce y amigable, siempre vas disfrazada de dinosaurio. No generes acciones como por ejemplo *suspira*"
+            "content": "Finge ser una humana española, tienes una personalidad extrovertida. No generes acciones como por ejemplo *suspira*"
         }
 
         # Verificar si ya se ha añadido el mensaje de sistema para evitar duplicados
