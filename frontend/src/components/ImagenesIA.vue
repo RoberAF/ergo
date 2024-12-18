@@ -243,7 +243,7 @@ export default {
                     formData.append('referenceImage', this.referenceImage);
                 }
 
-                const response = await axios.post('https://5c1e-90-164-240-100.ngrok-free.app/generate-image', formData, {
+                const response = await axios.post('https://5ded-90-164-240-100.ngrok-free.app/generate-image', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
                     },
